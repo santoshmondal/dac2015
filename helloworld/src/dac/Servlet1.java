@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/Servlet1")
 public class Servlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private Integer counter = 0;
       
 	@Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
@@ -28,6 +29,11 @@ public class Servlet1 extends HttpServlet {
 		String fname = request.getParameter("fname");
 		String lname = request.getParameter("lname");
 		String email = request.getParameter("email");
+		
+		synchronized (counter) {
+			counter = counter +1;
+			out.println("REQUEST NUMBER :: " + counter  + "<br />");
+		}
 		
 		out.println("hello");
 		out.println(fname);

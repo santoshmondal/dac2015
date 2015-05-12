@@ -9,24 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
-  	<!-- FOR SERVER -->
-	<servlet>
-	    <servlet-name>Servlet1</servlet-name>
-	    <servlet-class>dac.Servlet1</servlet-class> 
-	</servlet>
-	
-	<!-- FOR CLIENT -->
-  	<servlet-mapping>
-  	    <servlet-name>Servlet1</servlet-name>
-  	    <url-pattern>/s1</url-pattern>
-  	</servlet-mapping>
-  	
-  	
-  	
-  	<!-- URI of servlet
-  		 http://localhost:8080/helloworld/s1
-  	 -->
-  	
-  
+  <servlet>
+    <servlet-name>Servlet1</servlet-name>
+    <servlet-class>dac.Servlet1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet1</servlet-name>
+    <url-pattern>/s1</url-pattern>
+  </servlet-mapping>
 </web-app>

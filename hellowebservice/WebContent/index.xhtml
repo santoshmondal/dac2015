@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+	
+<head>
+<meta charset="UTF-8"></meta>
+<title>Insert title here</title>
+</head>
+<body>
+
+HELLO WORLD!! <br />
+NAME :: #{hello.name}
+
+<h:form>
+	Name :: <h:inputText value="#{hello.name}" required="true" requiredMessage="NAME CANT BE EMPTY!!"></h:inputText>
+	Name :: <h:inputText value="#{hello.user.uid}" ></h:inputText>
+	<h:commandButton action="#{hello.insertUser}" value="SUBMIT"></h:commandButton>
+</h:form>
+
+<h:messages></h:messages>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

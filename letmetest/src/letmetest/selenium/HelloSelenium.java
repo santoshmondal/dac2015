@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HelloSelenium {
@@ -14,7 +15,7 @@ public class HelloSelenium {
 	}
 
 	public static void main(String[] args) {
-		caclulatorNet();
+		tutorialsPoint();
 	}
 
 	public static void googleDemo() {
@@ -44,6 +45,34 @@ public class HelloSelenium {
 
 		String result = driver.findElement(By.xpath(".//*[@id='content']/p[2]/font/b")).getText();
 		System.out.println(" The Result is " + result);
+
+		driver.close();
+	}
+
+	public static void tutorialsPoint() {
+		driver.navigate().to("http://www.tutorialspoint.com/selenium/");
+		driver.manage().window().maximize();
+
+		// html/body/div[3]/div[1]/div/div[2]/div[1]/div/div[3]/a
+		WebElement webElement = driver.findElement(By.xpath("html/body/div[3]/div[1]/div/div[2]/div[1]/div/div[3]/a"));
+		webElement.click();
+
+		while (true) {
+			try {
+				WebElement elem1 = null;
+				elem1 = driver.findElement(By.xpath("html/body/div[3]/div[1]/div/div[2]/div[1]/div/div[7]/a"));
+
+				if (elem1 != null) {
+					webElement = driver.findElement(By.xpath("html/body/div[3]/div[1]/div/div[2]/div[1]/div/div[3]/a"));
+					webElement.click();
+				} else {
+					break;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+				break;
+			}
+		}
 
 		driver.close();
 	}

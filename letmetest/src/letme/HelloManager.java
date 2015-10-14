@@ -7,9 +7,9 @@ public class HelloManager {
 	private static final Logger log = LogManager.getLogger(HelloManager.class);
 	
 	public static void didUTest() {
-		log.debug("Hello World DEBUG!!");
-		log.info("Hello World INFO!!");
-		log.error("Hello World ERROR!!");
+		log.debug("HelloManager DEBUG!!");
+		log.info("HelloManager INFO!!");
+		log.error("HelloManager ERROR!!");
 	}
 
 }

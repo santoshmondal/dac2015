@@ -10,6 +10,7 @@ import letme.HelloManager;
 public class Hello {
 	private static final Logger log = LogManager.getLogger(Hello.class);
 	
+	
 	public static void main(String[] args) {
 		log.debug("Hello World DEBUG!!");
 		log.info("Hello World INFO!!");
